@@ -168,9 +168,6 @@
     <Folder Include="Controls\" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="discord.ico" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
@@ -179,12 +176,6 @@
     <Resource Include="Resources\icon.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="icon.ico" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="appicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="app_icon.ico" />
