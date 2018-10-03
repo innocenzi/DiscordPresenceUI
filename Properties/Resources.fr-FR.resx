@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="app" xml:space="preserve">
+    <value>Application</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="apps" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\apps.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="app_details_text" xml:space="preserve">
+    <value>Modifiez le formulaire en entrant les informations que vous voulez afin de mettre à jour votre présence sur Discord. Référez-vous à la [url=/Pages/Usage.xaml|_top]page d'utilisation[/url] pour plus d'informations sur la configuration de votre présence Discord.</value>
+  </data>
+  <data name="app_details_title" xml:space="preserve">
+    <value>PARAMÈTRES DE PRÉSENCE</value>
+  </data>
+  <data name="app_id" xml:space="preserve">
+    <value>Identifiant</value>
+  </data>
+  <data name="app_settings" xml:space="preserve">
+    <value>Paramètres</value>
+  </data>
+  <data name="app_settings_text" xml:space="preserve">
+    <value>Modifiez les paramètres suivants selon vos préférences. Appuyez sur Sauvegarder pour les enregistrer, sur Remettre à zéro pour obtenir les paramètres par défaut, ou sur Réparer s'ils ne s'enregistrent pas lorsque vous les sauvegardez.</value>
+  </data>
+  <data name="app_settings_title" xml:space="preserve">
+    <value>PARAMÈTRES</value>
+  </data>
+  <data name="assets" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\assets.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="boot_with_windows_text" xml:space="preserve">
+    <value>Démarrer avec Windows</value>
+  </data>
+  <data name="close_to_tray_text" xml:space="preserve">
+    <value>Réduire en icône à la fermeture</value>
+  </data>
+  <data name="configuration" xml:space="preserve">
+    <value>Configuration</value>
+  </data>
+  <data name="dark" xml:space="preserve">
+    <value>Sombre</value>
+  </data>
+  <data name="end_timestamp" xml:space="preserve">
+    <value>Horodatage de fin</value>
+  </data>
+  <data name="exit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="game_details" xml:space="preserve">
+    <value>Détails</value>
+  </data>
+  <data name="game_state" xml:space="preserve">
+    <value>État</value>
+  </data>
+  <data name="github" xml:space="preserve">
+    <value>GitHub</value>
+  </data>
+  <data name="help" xml:space="preserve">
+    <value>Aide</value>
+  </data>
+  <data name="icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="icon_ico" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\icon.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images_hint" xml:space="preserve">
+    <value>Vous pouvez ajouter une image dans le [url=cmd://portal]portail[/url]. Plus d'informations [url=/Pages/Usage.xaml]ici[/url].</value>
+  </data>
+  <data name="large_image_key" xml:space="preserve">
+    <value>Identifiant de l'image</value>
+  </data>
+  <data name="large_image_text" xml:space="preserve">
+    <value>Texte de l'image</value>
+  </data>
+  <data name="light" xml:space="preserve">
+    <value>Clair</value>
+  </data>
+  <data name="repair" xml:space="preserve">
+    <value>Réparer</value>
+  </data>
+  <data name="repair_message" xml:space="preserve">
+    <value>Si vous appuyez sur Oui, vos paramètres vont être effacés et une tentative de réparation va être effectuée. Continuer ?</value>
+  </data>
+  <data name="reset" xml:space="preserve">
+    <value>Remettre à zéro</value>
+  </data>
+  <data name="restart_message" xml:space="preserve">
+    <value>Voulez-vous vraiment redémarrer l'application ?</value>
+  </data>
+  <data name="rich_presence" xml:space="preserve">
+    <value>Présence</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>Sauvegarder</value>
+  </data>
+  <data name="small_image_key" xml:space="preserve">
+    <value>Identifiant de l'icône</value>
+  </data>
+  <data name="small_image_text" xml:space="preserve">
+    <value>Texte de l'icône</value>
+  </data>
+  <data name="start_in_tray_text" xml:space="preserve">
+    <value>Démarrer de manière réduite</value>
+  </data>
+  <data name="start_timestamp" xml:space="preserve">
+    <value>Horodatage de fin</value>
+  </data>
+  <data name="title" xml:space="preserve">
+    <value>Discord Rich Presence</value>
+  </data>
+  <data name="update" xml:space="preserve">
+    <value>Mettre à jour</value>
+  </data>
+  <data name="usage" xml:space="preserve">
+    <value>Utilisation</value>
+  </data>
+  <data name="configure_your_app" xml:space="preserve">
+    <value>CONFIGUREZ VOTRE APPLICATION</value>
+  </data>
+  <data name="configure_your_app_text" xml:space="preserve">
+    <value>Maintenant que votre application est créée, vous devez lui [b]donner un nom[/b]. C'est ce nom qui apparaîtra comme jeu actuel dans la liste des membres de vos serveurs. Vous pouvez modifier ce nom quand vous voulez, mais seulement sur le portail des développeurs.
+
+Vous avez également besoin de copier votre [b]identifiant d'application[/b]. Il est requis dans les [url=/Pages/RichPresenceSettings.xaml]paramètres de présence[/url]. 
+Enfin, vous devrez télécharger [url=cmd://portal]une ou plusieurs images[/url]. 
+                    
+Vous pouvez envoyer n'importe quelle image de plus de [b]512 x 512[/b] pixels. Le nom que vous lui donnez sera celui que vous devrez renseigner dans les [url=/Pages/RichPresenceSettings.xaml]paramètres de présence[/url].</value>
+  </data>
+  <data name="create_your_app" xml:space="preserve">
+    <value>CRÉEZ VOTRE APPLICATION</value>
+  </data>
+  <data name="create_your_app_text" xml:space="preserve">
+    <value>Pour que votre présence Discord fonctionne, vous aurez passer par quelques étapes qui ne peuvent s'effectuer que sur le site de Discord.
+
+Premièrement, rendez-vous sur ce [url=https://discordapp.com/developers/applications/]portail des développeurs[/url]. Vous aurez peut-être besoin de vous connecter.
+Une fois connecté, vous avez la possibilité de [b]créer une application[/b].</value>
+  </data>
+  <data name="how_to_use" xml:space="preserve">
+    <value>UTILISATION</value>
+  </data>
+  <data name="quick_note" xml:space="preserve">
+    <value>NOTE SUR LES APPLICATIONS</value>
+  </data>
+  <data name="quick_note_text" xml:space="preserve">
+    <value>Une application est un outil qui permet à un développeur de créer des [b]bots[/b], des [b]logiciels tiers[/b], ou encore des [b]présences[/b] pour leurs jeux. 
+Si vous avez besoin de plus d'informations sur le portail des développeurs, vous pouvez vous rendre sur sa [url=https://discordapp.com/developers/docs/intro]documentation[/url].</value>
+  </data>
+  <data name="exit_message" xml:space="preserve">
+    <value>Êtes-vous sûr de vouloir quitter ? Votre présence Discord va disparaître.</value>
+  </data>
+  <data name="reset_message" xml:space="preserve">
+    <value>Ceci va remettre à zéro vos paramètres. Êtes-vous sûr de vouloir continuer ?</value>
+  </data>
+  <data name="locale_text" xml:space="preserve">
+    <value>Langage</value>
+  </data>
+  <data name="restart" xml:space="preserve">
+    <value>Redémarrer</value>
+  </data>
+</root>

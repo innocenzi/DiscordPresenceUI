@@ -1,0 +1,122 @@
+﻿<UserControl x:Class="DiscordPresenceUI.Pages.RichPresenceSettings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:p="clr-namespace:DiscordPresenceUI.Properties"
+             xmlns:app="clr-namespace:DiscordPresenceUI.Core"
+             xmlns:mui="http://firstfloorsoftware.com/ModernUI"
+             mc:Ignorable="d">
+
+
+    <Grid Style="{StaticResource ContentRoot}">
+
+        <Grid.Resources>
+            <Style TargetType="mui:BBCodeBlock" >
+                <Setter Property="LinkNavigator">
+                    <Setter.Value>
+                        <mui:DefaultLinkNavigator>
+                            <mui:DefaultLinkNavigator.Commands>
+                                <app:PortalCommand x:Key="cmd://portal" />
+                            </mui:DefaultLinkNavigator.Commands>
+                        </mui:DefaultLinkNavigator>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Grid.Resources>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <TextBlock Text="{x:Static p:Resources.app_details_title}" Style="{StaticResource Heading1}" Margin="0,0,0,8" />
+            <mui:BBCodeBlock BBCode="{x:Static p:Resources.app_details_text}" Margin="0,0,0,16"/>
+        </StackPanel>
+
+        <Grid Grid.Row="1" Name="Form">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.DataContext>
+                <app:RichPresenceViewModel />
+            </Grid.DataContext>
+            
+            <Grid.Resources>
+                <Style TargetType="DockPanel">
+                    <Setter Property="Margin" Value="0,4,0,4" />
+                    <Setter Property="VerticalAlignment" Value="Stretch" />
+                </Style>
+                <Style TargetType="Label" BasedOn="{StaticResource {x:Type Label}}">
+                    <Setter Property="MinWidth" Value="100" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+                <Style TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+                    <Setter Property="HorizontalAlignment" Value="Stretch" />
+                    <Setter Property="Margin" Value="15,0,0,0" />
+                </Style>
+            </Grid.Resources>
+
+            <StackPanel Grid.Column="0" Orientation="Vertical">
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.app_id}" Target="{Binding ElementName=TextAppId}"/>
+                    <TextBox x:Name="TextAppId" Text="{Binding AppId, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.game_state}" Target="{Binding ElementName=TextGameState}"/>
+                    <TextBox x:Name="TextGameState" Text="{Binding GameState, ValidatesOnDataErrors=True}"/>
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.game_details}" Target="{Binding ElementName=TextGameDetails}"/>
+                    <TextBox x:Name="TextGameDetails" Text="{Binding GameDetails, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.start_timestamp}" Target="{Binding ElementName=TextStartTimestamp}"/>
+                    <TextBox x:Name="TextStartTimestamp" Text="{Binding StartTimestamp, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.end_timestamp}" Target="{Binding ElementName=TextEndTimestamp}"/>
+                    <TextBox x:Name="TextEndTimestamp" Text="{Binding EndTimestamp, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Orientation="Vertical" Margin="20,0,0,0">
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.large_image_key}" Target="{Binding ElementName=TextLargeImageKey}"/>
+                    <TextBox x:Name="TextLargeImageKey" Text="{Binding LargeImageKey, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.large_image_text}" Target="{Binding ElementName=TextLargeImageText}"/>
+                    <TextBox x:Name="TextLargeImageText" Text="{Binding LargeImageText, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.small_image_key}" Target="{Binding ElementName=TextSmallImageKey}"/>
+                    <TextBox x:Name="TextSmallImageKey" Text="{Binding SmallImageKey, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <Label Content="{x:Static p:Resources.small_image_text}" Target="{Binding ElementName=TextSmallImageText}"/>
+                    <TextBox x:Name="TextSmallImageText" Text="{Binding SmallImageText, Mode=TwoWay, ValidatesOnDataErrors=True}" />
+                </DockPanel>
+                <DockPanel>
+                    <mui:BBCodeBlock BBCode="{x:Static p:Resources.images_hint}" Margin="0,0,0,16"/>
+                </DockPanel>
+            </StackPanel>
+
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Button Name="UpdateButton"
+                    Content="{x:Static p:Resources.update}"
+                    HorizontalAlignment="Right"
+                    Click="UpdateButton_Click"
+                    VerticalAlignment="Bottom"/>
+        </Grid>
+        
+    </Grid>
+
+</UserControl>
