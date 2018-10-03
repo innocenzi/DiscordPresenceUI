@@ -17,7 +17,7 @@
     Icon="/DiscordPresenceUI;component/Resources/icon.png" Initialized="ModernWindow_Initialized">
 
     <mui:ModernWindow.TitleLinks>
-        <mui:Link DisplayName="{x:Static p:Resources.github}" Source="https://github.com/hawezo" />
+        <mui:Link DisplayName="{x:Static p:Resources.github}" Source="https://github.com/hawezo/DiscordPresenceUI" />
         <mui:Link DisplayName="{x:Static p:Resources.light}" Source="cmd://lighttheme" />
         <mui:Link DisplayName="{x:Static p:Resources.dark}" Source="cmd://darktheme" />
     </mui:ModernWindow.TitleLinks>
