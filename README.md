@@ -1,6 +1,6 @@
 # DiscordPresenceUI
 
-Little software made in C# with the help of [Modern UI](https://github.com/firstfloorsoftware/mui) and [discord-rpc-csharp]'https://github.com/Lachee/discord-rpc-csharp).
+Little software made in C# with the help of [Modern UI](https://github.com/firstfloorsoftware/mui) and [discord-rpc-csharp](https://github.com/Lachee/discord-rpc-csharp).
 
 ![Discord Presence UI](https://i.imgur.com/AcYnrC9.png)
 
