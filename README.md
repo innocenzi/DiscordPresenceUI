@@ -11,7 +11,7 @@ In order to make it work, you will need to configure an app on the [Discord Deve
 
 # Installation
 
-Download the [last release](https://github.com/hawezo/DiscordPresenceUI/releases) or use the [always up-to-date link](http://hawezo.legtux.org/dev/dpui/DiscordPresenceUI.zip).
+Download the [latest release](https://github.com/hawezo/DiscordPresenceUI/releases/latest) or a [direct link](http://hawezo.legtux.org/dev/dpui/DiscordPresenceUI.zip).
 
 Extract the archive in `C:\Program Files\` or in your `Documents` folder.
 
