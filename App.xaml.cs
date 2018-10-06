@@ -1,4 +1,5 @@
 ﻿using DiscordPresenceUI.Core;
+using DiscordPresenceUI.Windows;
 using Hardcodet.Wpf.TaskbarNotification;
 using System;
 using System.Windows;
@@ -8,10 +9,13 @@ namespace DiscordPresenceUI
     public partial class App : Application
     {
 
+        /// <summary>
+        /// Handles the startup of the app.
+        /// </summary>
         private void AppStart(object sender, StartupEventArgs e)
         {
-            RPC.Initialize(DiscordPresenceUI.Properties.Settings.Default.AppId);
-            RPC.UpdateFromSettings();
+            RichPresenceHelper.Initialize(DiscordPresenceUI.Properties.Settings.Default.AppId);
+            RichPresenceHelper.UpdateFromSettings();
             SettingsHelper.SetLocale();
             SettingsHelper.CheckForInstances();
             SettingsHelper.SetStartupSettings();
@@ -19,9 +23,12 @@ namespace DiscordPresenceUI
             TaskbarIconHelper.InitializeTaskbarIcon();
         }
 
+        /// <summary>
+        /// Handles the exit of the app.
+        /// </summary>
         private void AppExit(object sender, ExitEventArgs e)
         {
-            RPC.Dispose();
+            RichPresenceHelper.Dispose();
             TaskbarIconHelper.Dispose();
             SettingsHelper.SetStartupSettings();
             SettingsHelper.SaveTheme();

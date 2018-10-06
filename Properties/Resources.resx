@@ -273,4 +273,10 @@ If you need more informations about the Developer Portal, you can check its [url
   <data name="restart" xml:space="preserve">
     <value>Restart</value>
   </data>
+  <data name="new_version" xml:space="preserve">
+    <value>A new version ({0}) is available. Current version is {1}. Do you want to download it?</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>New version ({0})</value>
+  </data>
 </root>

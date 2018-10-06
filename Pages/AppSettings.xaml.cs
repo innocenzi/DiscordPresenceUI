@@ -7,17 +7,23 @@ namespace DiscordPresenceUI.Pages
 {
     public partial class AppSettings : Page
     {
-        public AppSettings()
-        {
-            InitializeComponent();
-        }
+        /// <summary>
+        /// Handles the page initialization.
+        /// </summary>
+        public AppSettings() => InitializeComponent();
 
+        /// <summary>
+        /// Handles the save button.
+        /// </summary>
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
             SettingsHelper.SetStartupSettings();
         }
 
+        /// <summary>
+        /// Handles the reset button.
+        /// </summary>
         private void ResetButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult response = ModernDialog.ShowMessage(
@@ -35,6 +41,9 @@ namespace DiscordPresenceUI.Pages
             }
         }
 
+        /// <summary>
+        /// Handles the restart button.
+        /// </summary>
         private void RestartButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult response = ModernDialog.ShowMessage(
@@ -45,6 +54,9 @@ namespace DiscordPresenceUI.Pages
                 SettingsHelper.Restart();
         }
 
+        /// <summary>
+        /// Handles the exit button.
+        /// </summary>
         private void ExitButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult response = ModernDialog.ShowMessage(
@@ -55,6 +67,9 @@ namespace DiscordPresenceUI.Pages
                 Application.Current.Shutdown(0);
         }
 
+        /// <summary>
+        /// Handles the repair button.
+        /// </summary>
         private void RepairButton_Click(object sender, RoutedEventArgs e)
         {
             MessageBoxResult response = ModernDialog.ShowMessage(

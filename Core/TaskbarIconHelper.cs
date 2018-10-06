@@ -4,12 +4,19 @@ using System.Windows.Controls;
 
 namespace DiscordPresenceUI.Core
 {
-    static class TaskbarIconHelper
+
+    /// <summary>
+    /// Helper class for using an icon in the taskbar.
+    /// </summary>
+    internal static class TaskbarIconHelper
     {
 
         private static TaskbarIcon _icon;
         private static ContextMenu _contextMenu;
 
+        /// <summary>
+        /// Initializes the taskbar icon.
+        /// </summary>
         public static void InitializeTaskbarIcon()
         {
             _contextMenu = new ContextMenu();
@@ -35,12 +42,18 @@ namespace DiscordPresenceUI.Core
             };
         }
 
+        /// <summary>
+        /// ToolTipText property.
+        /// </summary>
         public static string ToolTipText
         {
             get => _icon.ToolTipText;
             set => _icon.ToolTipText = value;
         }
 
+        /// <summary>
+        /// Disposes the taskbar icon.
+        /// </summary>
         public static void Dispose()
         {
             if (_icon != null)

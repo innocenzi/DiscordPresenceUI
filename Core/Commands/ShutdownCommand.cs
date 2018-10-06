@@ -6,7 +6,9 @@ namespace DiscordPresenceUI.Core.Commands
 {
     class ShutdownCommand : ICommand
     {
+#pragma warning disable 67
         public event EventHandler CanExecuteChanged;
+#pragma warning restore 67
 
         public bool CanExecute(object parameter) => true;
 

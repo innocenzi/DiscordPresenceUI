@@ -1,17 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace DiscordPresenceUI.Core
 {
-    public class Locale
+
+    /// <summary>
+    /// Locale handler class.
+    /// </summary>
+    internal class Locale
     {
+
+        /// <summary>
+        /// Locale identifier.
+        /// </summary>
         public string Identifier { get; set; }
+
+        /// <summary>
+        /// Locale name for friendly usage.
+        /// </summary>
         public string FriendlyName { get; set; }
 
+        /// <summary>
+        /// Gets the <seealso cref="Locale"/> class for the given identifier.
+        /// </summary>
         public static Locale GetLocale(string identifier)
         {
             switch (identifier)
@@ -32,6 +42,9 @@ namespace DiscordPresenceUI.Core
             }
         }
 
+        /// <summary>
+        /// Returns a list of handled locales.
+        /// </summary>
         public static ObservableCollection<Locale> GetLocales()
         {
             return new ObservableCollection<Locale>()

@@ -1,17 +1,15 @@
 ﻿using FirstFloor.ModernUI.Presentation;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DiscordPresenceUI.Core
 {
+    /// <summary>
+    /// Command that opens the assets page.
+    /// </summary>
     class PortalCommand : CommandBase
     {
         /// <summary>
-        /// Executes the command.
+        /// Executes the modern ui command.
         /// </summary>
         protected override void OnExecute(object parameter)
         {

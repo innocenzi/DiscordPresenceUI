@@ -4,6 +4,10 @@ using System.ComponentModel;
 
 namespace DiscordPresenceUI.Core
 {
+
+    /// <summary>
+    /// View Model for rich presence settings.
+    /// </summary>
     class RichPresenceViewModel : NotifyPropertyChanged, IDataErrorInfo
     {
 
@@ -90,11 +94,11 @@ namespace DiscordPresenceUI.Core
                 {
                     this.largeImageKey = value;
                     OnPropertyChanged("LargeImageKey");
-                    Properties.Settings.Default["LargeImageKey"] = value;
+                    Properties.Settings.Default["LargeImageKey"] = value.ToLower();
                 }
             }
         }
-        private string largeImageKey = (string)Properties.Settings.Default["LargeImageKey"];
+        private string largeImageKey = ((string)Properties.Settings.Default["LargeImageKey"]).ToLower();
 
         public string LargeImageText
         {
@@ -120,11 +124,11 @@ namespace DiscordPresenceUI.Core
                 {
                     this.smallImageKey = value;
                     OnPropertyChanged("SmallImageKey");
-                    Properties.Settings.Default["SmallImageKey"] = value;
+                    Properties.Settings.Default["SmallImageKey"] = value.ToLower();
                 }
             }
         }
-        private string smallImageKey = (string)Properties.Settings.Default["SmallImageKey"];
+        private string smallImageKey = ((string)Properties.Settings.Default["SmallImageKey"]).ToLower();
 
         public string SmallImageText
         {

@@ -3,6 +3,9 @@ using System.Runtime.InteropServices;
 
 namespace DiscordPresenceUI.Core
 {
+    /// <summary>
+    /// Helper class for interacting with the Win32 API.
+    /// </summary>
     internal class Win32Helper
     {
         public const int HWND_BROADCAST = 0xffff;

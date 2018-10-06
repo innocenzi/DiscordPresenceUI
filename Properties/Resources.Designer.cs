@@ -360,6 +360,24 @@ namespace DiscordPresenceUI.Properties {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à A new version ({0}) is available. Current version is {1}. Do you want to download it?.
+        /// </summary>
+        public static string new_version {
+            get {
+                return ResourceManager.GetString("new_version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à New version ({0}).
+        /// </summary>
+        public static string new_version_text {
+            get {
+                return ResourceManager.GetString("new_version_text", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à QUICK NOTE ABOUT APPS.
         /// </summary>
         public static string quick_note {

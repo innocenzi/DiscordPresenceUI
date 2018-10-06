@@ -9,19 +9,22 @@ namespace DiscordPresenceUI.Pages
     {
 
         /// <summary>
-        /// Gets the RichPresenceViewModel
+        /// View model for the rich presence settings.
         /// </summary>
         private RichPresenceViewModel RichPresenceViewModel { get => ((RichPresenceViewModel)Form.DataContext); }
 
-        public RichPresenceSettings()
-        {
-            InitializeComponent();
-        }
+        /// <summary>
+        /// Handles the page initialization.
+        /// </summary>
+        public RichPresenceSettings() => InitializeComponent();
 
+        /// <summary>
+        /// Handles the update button.
+        /// </summary>
         private void UpdateButton_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.Save();
-            RPC.UpdateFromSettings();
+            RichPresenceHelper.UpdateFromSettings();
         }
     }
 }

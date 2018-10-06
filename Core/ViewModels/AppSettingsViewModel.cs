@@ -4,7 +4,11 @@ using System.ComponentModel;
 
 namespace DiscordPresenceUI.Core
 {
-    class AppSettingsViewModel : NotifyPropertyChanged, IDataErrorInfo
+
+    /// <summary>
+    /// View Model for application settings.
+    /// </summary>
+    internal class AppSettingsViewModel : NotifyPropertyChanged, IDataErrorInfo
     {
 
         public bool StartWithWindows

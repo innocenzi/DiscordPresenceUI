@@ -8,10 +8,17 @@ using System.Windows;
 
 namespace DiscordPresenceUI.Core
 {
-    static class SettingsHelper
+
+    /// <summary>
+    /// Helper class for using and saving app settings.
+    /// </summary>
+    internal static class SettingsHelper
     {
         private static Mutex _mutex = new Mutex(true, "{8F6F0AC4-B9A1-45fd-A8CF-72F04E6BDE8F}");
 
+        /// <summary>
+        /// Checks for instances of the app.
+        /// </summary>
         [STAThread]
         internal static void CheckForInstances()
         {
@@ -28,6 +35,9 @@ namespace DiscordPresenceUI.Core
             }
         }
 
+        /// <summary>
+        /// Handles a message from the Win3
+        /// </summary>
         internal static IntPtr WndProc(IntPtr hwnd, int msg, IntPtr wParam, IntPtr lParam, ref bool handled)
         {
             if (msg == Win32Helper.WM_SHOWME && App.Current.MainWindow != null)
@@ -40,6 +50,9 @@ namespace DiscordPresenceUI.Core
             return IntPtr.Zero;
         }
 
+        /// <summary>
+        /// Handles the registry settings for the app to start with windows.
+        /// </summary>
         internal static void SetStartupSettings()
         {
             try
@@ -52,29 +65,40 @@ namespace DiscordPresenceUI.Core
                 else
                     key.DeleteValue(assembly.GetName().Name, false);
             }
-            catch (Exception e)
-            {
-                ModernDialog.ShowMessage("An error has occured while trying to set the starting with windows thiny up.\n" + e.Message, "Error", MessageBoxButton.OK);
-            }
+            catch (Exception) { /* there really need to be a message there. */ }
         }
 
+        /// <summary>
+        /// Sets the locale.
+        /// </summary>
+        /// <param name="locale">String representing the wanted locale. <seealso cref="Locale"/></param>
         internal static void SetLocale(string locale = null)
         {
             locale = locale ?? Properties.Settings.Default.Locale;
             Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo(locale);
         }
 
+        /// <summary>
+        /// Saves the selected theme.
+        /// </summary>
         internal static void SaveTheme()
         {
             Properties.Settings.Default.Theme = FirstFloor.ModernUI.Presentation.AppearanceManager.Current.ThemeSource;
             Properties.Settings.Default.Save();
         }
 
+        /// <summary>
+        /// Sets the theme.
+        /// </summary>
         internal static void SetTheme()
         {
             FirstFloor.ModernUI.Presentation.AppearanceManager.Current.ThemeSource = DiscordPresenceUI.Properties.Settings.Default.Theme;
         }
 
+        /// <summary>
+        /// Restarts the app.
+        /// Credits to stackoverflow.
+        /// </summary>
         internal static void Restart()
         {
             ProcessStartInfo Info = new ProcessStartInfo

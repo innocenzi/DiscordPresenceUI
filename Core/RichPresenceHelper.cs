@@ -6,11 +6,18 @@ using System;
 
 namespace DiscordPresenceUI
 {
-    public static class RPC
+
+    /// <summary>
+    /// Helper class for using the Discord Rich Presence.
+    /// </summary>
+    internal static class RichPresenceHelper
     {
 
         private static DiscordRpcClient _client;
         
+        /// <summary>
+        /// Defines if the RPC is initialized or not.
+        /// </summary>
         public static bool IsInitialized { get; private set; } = false;
 
         /// <summary>
@@ -32,7 +39,7 @@ namespace DiscordPresenceUI
             _client.OnPresenceUpdate += OnPresenceUpdate;
 
             _client.Initialize();
-            RPC.IsInitialized = true;
+            RichPresenceHelper.IsInitialized = true;
         }
 
         /// <summary>
@@ -40,12 +47,12 @@ namespace DiscordPresenceUI
         /// </summary>
         public static void UpdateFromSettings()
         {
-            if (!RPC.IsInitialized)
-                RPC.Initialize(Properties.Settings.Default.AppId);
+            if (!RichPresenceHelper.IsInitialized)
+                RichPresenceHelper.Initialize(Properties.Settings.Default.AppId);
 
-            if (RPC.IsInitialized)
+            if (RichPresenceHelper.IsInitialized)
             {
-                RPC.Update(new RichPresence()
+                RichPresenceHelper.Update(new RichPresence()
                 {
                     Details = Properties.Settings.Default.GameDetails,
                     State = Properties.Settings.Default.GameState,
@@ -70,7 +77,7 @@ namespace DiscordPresenceUI
         /// </summary>
         public static void Update(RichPresence presence)
         {
-            if (!RPC.IsInitialized)
+            if (!RichPresenceHelper.IsInitialized)
                 throw new Exception("RPC must be initialized before the presence can be updated.");
 
             _client.Invoke();
@@ -83,7 +90,7 @@ namespace DiscordPresenceUI
         /// </summary>
         public static void Invoke()
         {
-            if (RPC.IsInitialized)
+            if (RichPresenceHelper.IsInitialized)
                 _client.Invoke();
         }
 
@@ -94,31 +101,30 @@ namespace DiscordPresenceUI
         {
             if (_client != null)
                 _client.ClearPresence();
-            if (RPC.IsInitialized)
+            if (RichPresenceHelper.IsInitialized)
                 _client.Dispose();
-            RPC.IsInitialized = false;
+            RichPresenceHelper.IsInitialized = false;
         }
-
-
+        
         #region Events
 
         #region State Events
         private static void OnReady(object sender, ReadyMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Ready (RPC version {0})", args.Version));
-            RPC.IsInitialized = true;
+            RichPresenceHelper.IsInitialized = true;
 
         }
         private static void OnClose(object sender, CloseMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Lost connection with client because of '{0}'.", args.Reason));
-            RPC.IsInitialized = false;
+            RichPresenceHelper.IsInitialized = false;
         }
         private static void OnError(object sender, ErrorMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Error occured within discord. ({1}) {0}", args.Message, args.Code));
         }
         #endregion
@@ -126,20 +132,20 @@ namespace DiscordPresenceUI
         #region Pipe Connection Events
         private static void OnConnectionEstablished(object sender, ConnectionEstablishedMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Pipe connection established on #{0}.", args.ConnectedPipe));
         }
         private static void OnConnectionFailed(object sender, ConnectionFailedMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Pipe connection failed on #{0}.", args.FailedPipe));
-            RPC.IsInitialized = false;
+            RichPresenceHelper.IsInitialized = false;
         }
         #endregion
 
         private static void OnPresenceUpdate(object sender, PresenceMessage args)
         {
-            RPC.Log(args.Type, args.TimeCreated,
+            RichPresenceHelper.Log(args.Type, args.TimeCreated,
                 string.Format("Now playing {0}.", args.Presence == null ? "nothing" : args.Presence.State));
         }
         

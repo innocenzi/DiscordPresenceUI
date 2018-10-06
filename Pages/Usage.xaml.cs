@@ -4,9 +4,9 @@ namespace DiscordPresenceUI.Pages
 {
     public partial class Usage : UserControl
     {
-        public Usage()
-        {
-            InitializeComponent();
-        }
+        /// <summary>
+        /// Handles the page loading.
+        /// </summary>
+        public Usage() => InitializeComponent();
     }
 }

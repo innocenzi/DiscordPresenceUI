@@ -274,4 +274,10 @@ Si vous avez besoin de plus d'informations sur le portail des développeurs, vou
   <data name="restart" xml:space="preserve">
     <value>Redémarrer</value>
   </data>
+  <data name="new_version" xml:space="preserve">
+    <value>Une nouvelle version ({0}) est disponible. La version actuelle est la {1}. Voulez-vous vous rendre sur la page de téléchargement ?</value>
+  </data>
+  <data name="new_version_text" xml:space="preserve">
+    <value>Nouvelle version ({0})</value>
+  </data>
 </root>
