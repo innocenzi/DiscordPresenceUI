@@ -18,5 +18,5 @@ In order to make it work, you will need to configure an app on the [Discord Deve
 
 # Updating
 
-Starting off [https://github.com/hawezo/DiscordPresenceUI/tree/2.0](version 2), the app will check for updates at startup. If an update is available, you will be asked to open a browser window to download the last release. If you do so, you will have to replace your current installation — basically, removing old files and replacing them by the new ones.
+Starting off [version 2](https://github.com/hawezo/DiscordPresenceUI/tree/2.0/), the app will check for updates at startup. If an update is available, you will be asked to open a browser window to download the last release. If you do so, you will have to replace your current installation — basically, removing old files and replacing them by the new ones.
 To update settings, click `Repair` in the app settings of the latest version and restart.
