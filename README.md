@@ -11,10 +11,12 @@ In order to make it work, you will need to configure an app on the [Discord Deve
 
 # Installation
 
-Download the [latest release](https://github.com/hawezo/DiscordPresenceUI/releases/latest) or a [direct link](http://hawezo.legtux.org/dev/dpui/DiscordPresenceUI.zip).
+- Download the [latest release](https://github.com/hawezo/DiscordPresenceUI/releases/latest) or a [direct link](http://hawezo.legtux.org/dev/dpui/DiscordPresenceUI.zip).
+- Extract the archive in `C:\Program Files\` or in your `Documents` folder.
+- Create a shortcut to `DiscordPresenceUI.exe` and place it wherever you want.
+- Start the `.exe` and configure it. You may refer to the `help` tab in order to understand how to use it.
 
-Extract the archive in `C:\Program Files\` or in your `Documents` folder.
+# Updating
 
-Create a shortcut to `DiscordPresenceUI.exe` and place it wherever you want.
-
-Start the `.exe` and configure it. You may refer to the `help` tab in order to understand how to use it.
+Starting off [https://github.com/hawezo/DiscordPresenceUI/tree/2.0](version 2), the app will check for updates at startup. If an update is available, you will be asked to open a browser window to download the last release. If you do so, you will have to replace your current installation — basically, removing old files and replacing them by the new ones.
+To update settings, click `Repair` in the app settings of the latest version and restart.
